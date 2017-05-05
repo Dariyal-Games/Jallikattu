@@ -26,22 +26,13 @@ public class Stats : MonoBehaviour {
 		get{ return PrimaryStats.Strength * UnityConversionFactors.Shrug; }
 	}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 	[Serializable]
 	public class Primary
 	{
-		public float Strength{ get; set;}
-		public float Stamina{ get; set;}
-		public float Agility{ get; set; }
-		public float Speed{ get; set; }
+        public float Strength;
+        public float Stamina;
+        public float Agility;
+        public float Speed;
 
 	}
 }
