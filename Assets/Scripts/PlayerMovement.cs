@@ -14,14 +14,15 @@ public class PlayerMovement : MonoBehaviour
     float turnRate = 30f;
     bool LTap;
     bool RTap;
-
     bool press;
+
+    Stats bullStats;
 
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
-
+        bullStats = GetComponent<Stats>();
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
             //Quaternion target = Quaternion.Euler(0, turnRadius , 0);
             //transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 2.0f);
 
-            transform.Rotate(transform.up, turnRate * Time.deltaTime);
+            transform.Rotate(transform.up, bullStats.TurnRate * Time.deltaTime);
             RTap = true;
 
         }
@@ -51,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
             t = 0;
         }
         if (RTap == true)
-            transform.Rotate(transform.up, +turnRate * Time.deltaTime);
+            transform.Rotate(transform.up, +bullStats.TurnRate * Time.deltaTime);
 
 
 
@@ -72,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (LTap == true)
-            transform.Rotate(transform.up, -turnRate * Time.deltaTime);
+            transform.Rotate(transform.up, -bullStats.TurnRate * Time.deltaTime);
 
         if ((!RTap || !LTap) && !(!RTap && !LTap))
         {
@@ -84,14 +85,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Accelerate()
     {
-        currentSpeed += acceleration;
-        currentSpeed = Mathf.Clamp(currentSpeed, minSpeed, maxSpeed);
+        currentSpeed += bullStats.Accelertion;
+        currentSpeed = Mathf.Clamp(currentSpeed, bullStats.MinSpeed, bullStats.MaxSpeed);
     }
 
 
     void Decelerate()
     {
-        currentSpeed -= deceleration;
-        currentSpeed = Mathf.Clamp(currentSpeed, minSpeed, maxSpeed);
+        currentSpeed -= bullStats.Deceleration;
+        currentSpeed = Mathf.Clamp(currentSpeed, bullStats.MinSpeed, bullStats.MaxSpeed);
     }
 }
