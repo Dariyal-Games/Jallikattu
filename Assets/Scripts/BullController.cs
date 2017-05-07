@@ -6,13 +6,9 @@ public class BullController : MonoBehaviour
 {
 	public Transform attachPoint;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+        if (attachPoint == null) throw new System.Exception("Attach Point not set.");
+    }
+
 }
