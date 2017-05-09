@@ -12,6 +12,7 @@ public class Authenticator : MonoBehaviour
     private void Start()
     {
         PlayGamesPlatform.Activate();
+        SignIn();
     }
     public void SignIn()
     {
