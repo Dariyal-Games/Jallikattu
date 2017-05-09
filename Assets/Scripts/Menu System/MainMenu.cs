@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Text[] scoreText;
 
     // Use this for initialization
     void Start()
@@ -27,6 +29,14 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene");
         // for now we havnt any option list so when  it is ready we will replace with the option scene name.
+    }
+
+    public void ShowScores()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            scoreText[i].text = HiScore.Instance.HiScores[i].ToString();
+        }
     }
 
 }

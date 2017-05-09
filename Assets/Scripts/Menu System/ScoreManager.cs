@@ -19,14 +19,16 @@ public class ScoreManager : MonoBehaviour
                 if (_instance == null)
                 {
                     _instance = new GameObject("Score Manager").AddComponent<ScoreManager>();
-                    //DontDestroyOnLoad(_instance.gameObject);
                 }
             }
 
             return _instance;
         }
     }
-
+    private void Start()
+    {
+        // topScores = PlayerPrefs.GetInt(highScorersKey, 0);
+    }
 
 
     public void AdjustScore(int num)

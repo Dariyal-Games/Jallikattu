@@ -28,6 +28,7 @@ public class SampleScript : MonoBehaviour
 
     public void End()
     {
+        HiScore.Instance.SaveHiScore();
         Social.ReportScore(ScoreManager.Instance.GetScore(), GPGSIds.leaderboard_hi_score, (bool success) =>
         {
             if (success)
