@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (RTap == true)
             transform.Rotate(transform.up, +bullStats.TurnRate * Time.deltaTime);
-
+            
 
 
         if (CrossPlatformInputManager.GetButtonDown("Left"))

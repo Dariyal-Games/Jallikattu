@@ -35,6 +35,7 @@ public class MainMenu : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
+            
             scoreText[i].text = HiScore.Instance.HiScores[i].ToString();
         }
     }

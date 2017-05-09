@@ -8,6 +8,7 @@ public class SampleScript : MonoBehaviour
 {
 
     public Text ScoreText;
+  
     //private int MyScore;
 
     private void Update()
@@ -25,6 +26,8 @@ public class SampleScript : MonoBehaviour
     {
         ScoreManager.Instance.AdjustScore(-1);
     }
+
+   
 
     public void End()
     {

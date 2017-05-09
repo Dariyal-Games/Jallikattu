@@ -6,6 +6,7 @@ public class AttackerController : MonoBehaviour
 
     public Transform attachPoint;
     public float attackSpeed;
+    public float attackStrength;
 
     private Transform target;
     //private Vector3 offset;
