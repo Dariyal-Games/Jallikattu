@@ -30,6 +30,10 @@ public class ScoreManager : MonoBehaviour
         // topScores = PlayerPrefs.GetInt(highScorersKey, 0);
     }
 
+    public void SetScore(int score)
+    {
+        playerScore = score;
+    }
 
     public void AdjustScore(int num)
     {

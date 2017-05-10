@@ -8,7 +8,7 @@ public class CrowdSystem : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            personToAttach.GetComponent<AttackerController>().AttackBull(other.gameObject.GetComponent<BullController>().attachPoint);
+            personToAttach.GetComponent<AttackerController>().AttackBull(other.gameObject.GetComponent<BullController>());
         }
     }
 }

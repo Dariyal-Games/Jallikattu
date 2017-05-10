@@ -20,7 +20,7 @@ public class LaneManager : MonoBehaviour {
    	// Use this for initialization
 	void Start () {
         activeLanes = new List<GameObject>();
-        bullTransform = GameObject.FindGameObjectWithTag("Bull").transform;
+        bullTransform = GameObject.FindGameObjectWithTag("Player").transform;
 		for(int i=0; i<lanesOnScreen; i++)
         {
             if (i < 2)

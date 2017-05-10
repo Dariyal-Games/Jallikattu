@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -6,49 +7,47 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Shrug : MonoBehaviour
 {
-
-
-    public GameObject attacker;
-    AttackerController attackerStrength;
-
-
     Stats bullStats;
+    BullController controller;
 
+    float bullShrugStrength;
+    float attackerLatchStrength;
+    bool beingAttacked;
 
-
-    void Awake()
-    {
-        attackerStrength = GetComponent<AttackerController>();
-    }
-
-
-
-
+    public float shrugFactor;
 
     // Use this for initialization
     void Start()
     {
+        bullStats = GetComponent<Stats>();
+        controller = GetComponent<BullController>();
+        Messenger.AddListener("Bull Attacked", OnBullAttacked);
+    }
 
-
-
+    private void OnBullAttacked()
+    {
+        bullShrugStrength = (bullStats.PrimaryStats.Strength * .75f + bullStats.PrimaryStats.Stamina * .25f) * shrugFactor;
+        attackerLatchStrength = controller.GetAttacker().attackStrength;
+        beingAttacked = true;
+        Debug.Log("Bull getting attacked by attacker with strength " + attackerLatchStrength.ToString());
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        float strengthValue;
-        float shrugCalc = 0;
-        float bullStrength = bullStats.Shrug * 2;
-
-        strengthValue = bullStats.Shrug - attackerStrength.attackStrength * 2;
-
-        if (CrossPlatformInputManager.GetButtonDown("Space"))
+        if (beingAttacked)
         {
-            shrugCalc = bullStrength - strengthValue;
-        }
+            if (CrossPlatformInputManager.GetButtonDown("Shrug"))
+            {
+                attackerLatchStrength -= bullShrugStrength;
+            }
 
-        if (shrugCalc <= 0)
-            transform.parent = null;
+            if(attackerLatchStrength <= 0)
+            {
+                controller.GetAttacker().LeaveBull();
+                controller.SetAttacker(null);
+                beingAttacked = false;
+            }
+        }
     }
 }
