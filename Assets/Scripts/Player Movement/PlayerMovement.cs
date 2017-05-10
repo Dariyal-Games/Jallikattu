@@ -48,12 +48,12 @@ public class PlayerMovement : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonUp("Right"))
         {
             RTap = false;
-            tempRot = transform.rotation;
+            transform.rotation = Quaternion.identity;
             t = 0;
         }
         if (RTap == true)
             transform.Rotate(transform.up, +bullStats.TurnRate * Time.deltaTime);
-            
+
 
 
         if (CrossPlatformInputManager.GetButtonDown("Left"))
@@ -69,17 +69,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (CrossPlatformInputManager.GetButtonUp("Left"))
         {
+            transform.rotation = Quaternion.identity;
             LTap = false;
         }
 
         if (LTap == true)
             transform.Rotate(transform.up, -bullStats.TurnRate * Time.deltaTime);
 
-        if ((!RTap || !LTap) && !(!RTap && !LTap))
-        {
-            Quaternion.Lerp(tempRot, Quaternion.identity, t);
-            t += Time.deltaTime;
-        }
+
     }
 
 
@@ -95,4 +92,6 @@ public class PlayerMovement : MonoBehaviour
         currentSpeed -= bullStats.Deceleration;
         currentSpeed = Mathf.Clamp(currentSpeed, bullStats.MinSpeed, bullStats.MaxSpeed);
     }
+
+
 }
