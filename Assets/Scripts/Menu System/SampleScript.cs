@@ -43,6 +43,6 @@ public class SampleScript : MonoBehaviour
                 Debug.LogError("Hi Score couldnot be updaed.");
             }
         });
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 }

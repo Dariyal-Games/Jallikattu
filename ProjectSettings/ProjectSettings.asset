@@ -136,7 +136,7 @@ PlayerSettings:
   protectGraphicsMemory: 0
   useHDRDisplay: 0
   applicationIdentifier:
-    Android: com.Company.ProductName
+    Android: com.dariyal.jallikattu
     Standalone: unity.DefaultCompany.Jallikattu
     Tizen: com.Company.ProductName
     iOS: com.Company.ProductName

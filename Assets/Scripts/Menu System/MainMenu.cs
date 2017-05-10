@@ -31,11 +31,16 @@ public class MainMenu : MonoBehaviour
         // for now we havnt any option list so when  it is ready we will replace with the option scene name.
     }
 
+    public void Leave()
+    {
+        Application.Quit();
+    }
+
     public void ShowScores()
     {
         for (int i = 0; i < 5; i++)
         {
-            
+
             scoreText[i].text = HiScore.Instance.HiScores[i].ToString();
         }
     }
