@@ -55,6 +55,10 @@ public class AttackerController : MonoBehaviour
             AttachToBull(bull.attachPoint);
             Messenger.Broadcast("Bull Attacked");
         }
+        else
+        {
+            Debug.Log("Bull has attacker.");
+        }
     }
 
     public void LeaveBull()
@@ -77,8 +81,9 @@ public class AttackerController : MonoBehaviour
     private void AttachToBull(Transform bullAttachPoint)
     {
         transform.SetParent(bullAttachPoint);
-        target = bullAttachPoint;
-        direction = (bullAttachPoint.position - attachPoint.position).normalized;
+        Vector3 offset = bullAttachPoint.position - attachPoint.position;
+        transform.position += offset;
+
     }
 
     #endregion

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,6 +39,11 @@ public class ScoreManager : MonoBehaviour
     public void AdjustScore(int num)
     {
         playerScore += num;
+    }
+
+    internal object SetScore()
+    {
+        throw new NotImplementedException();
     }
 
     public int GetScore()

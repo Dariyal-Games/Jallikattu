@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BullController : MonoBehaviour 
+public class BullController : MonoBehaviour
 {
-	public Transform attachPoint;
+    public Transform attachPoint;
     private AttackerController attacker;
 
     void Start()
@@ -14,10 +14,7 @@ public class BullController : MonoBehaviour
 
     public void SetAttacker(AttackerController attacker)
     {
-        if (this.attacker == null)
-        {
-            this.attacker = attacker;
-        }
+        this.attacker = attacker;
     }
 
     public AttackerController GetAttacker()

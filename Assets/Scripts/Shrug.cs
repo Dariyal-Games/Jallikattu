@@ -46,6 +46,7 @@ public class Shrug : MonoBehaviour
             {
                 controller.GetAttacker().LeaveBull();
                 controller.SetAttacker(null);
+              
                 beingAttacked = false;
             }
         }
