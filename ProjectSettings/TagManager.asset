@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bull
+  - Attacker
+  - Obstacle
+  - Wall
   layers:
   - Default
   - TransparentFX

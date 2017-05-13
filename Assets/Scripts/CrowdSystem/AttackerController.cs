@@ -6,6 +6,7 @@ public class AttackerController : MonoBehaviour
 
     public Transform attachPoint;
     public float attackSpeed;
+    public float attackStrength;
 
     private Transform target;
     //private Vector3 offset;
@@ -20,6 +21,7 @@ public class AttackerController : MonoBehaviour
         if (attachPoint == null) throw new System.Exception("Attach Point not set.");
 
         //offset = attachPoint.position - transform.position;
+        Debug.Log("Attacker strength " + attackStrength);
     }
 
     void Update()
@@ -41,12 +43,31 @@ public class AttackerController : MonoBehaviour
     /// <summary>
     /// Attack the bull.
     /// </summary>
-    /// <param name="bullAttachPoint"></param>
-    public void AttackBull(Transform bullAttachPoint)
+    /// <param name="bull"></param>
+    public void AttackBull(BullController bull)
     {
-        if (bullAttachPoint == null) throw new System.Exception("Bull attach point is null! How the #@#$ did that happen.");
+        if (bull.attachPoint == null) throw new System.Exception("Bull attach point is null! How the #@#$ did that happen.");
 
-        AttachToBull(bullAttachPoint);
+        if (bull.GetAttacker() == null)
+        {
+            Debug.Log("Attacking Bull with strength " + attackStrength);
+            bull.SetAttacker(this);
+            AttachToBull(bull.attachPoint);
+            Messenger.Broadcast("Bull Attacked");
+        }
+        else
+        {
+            Debug.Log("Bull has attacker.");
+        }
+    }
+
+    public void LeaveBull()
+    {
+        Debug.Log("Leaving Bull.");
+        target = null;
+        transform.SetParent(null);
+        Messenger.Broadcast("Bull Escaped");
+        Destroy(gameObject);
     }
 
     #endregion
@@ -60,8 +81,9 @@ public class AttackerController : MonoBehaviour
     private void AttachToBull(Transform bullAttachPoint)
     {
         transform.SetParent(bullAttachPoint);
-        target = bullAttachPoint;
-        direction = (bullAttachPoint.position - attachPoint.position).normalized;
+        Vector3 offset = bullAttachPoint.position - attachPoint.position;
+        transform.position += offset;
+
     }
 
     #endregion
