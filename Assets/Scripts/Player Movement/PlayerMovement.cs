@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
+
+[RequireComponent(typeof(Stats))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
     float currentSpeed = 10;
+    float maxAngle = 20;
+    float minAngle = -20;
     float minSpeed = 5;
     float maxSpeed = 20;
     float acceleration = 10;
@@ -15,68 +18,74 @@ public class PlayerMovement : MonoBehaviour
     bool LTap;
     bool RTap;
     bool press;
+    Transform lWall;
+    Transform rWall;
 
     Stats bullStats;
 
 
     // Use this for initialization
-    void Awake()
+    void Start()
     {
         bullStats = GetComponent<Stats>();
+        currentSpeed = bullStats.MaxSpeed;
+
+        GameObject lhitgo = GameObject.Find("lWall");
+        if (lhitgo == null) throw new System.Exception("lWall not found in scene. Add it.");
+        GameObject rhitgo = GameObject.Find("rWall");
+        if (rhitgo == null) throw new System.Exception("rWall not found in scene. Add it.");
+
+        rWall = rhitgo.transform;
+        lWall = lhitgo.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(transform.forward * currentSpeed * Time.deltaTime);
-        Quaternion tempRot = Quaternion.identity;
-        float t = 0;
+        bool lHit = transform.position.x < -0.6f;
+        bool rHit = transform.position.x > 0.6f;
+
         if (CrossPlatformInputManager.GetButtonDown("Right"))
         {
-            //var posi = transform.position;
-            //posi.x = transform.position.x + turnRadius * Time.deltaTime;
-            //transform.position = posi;
-
-            //Quaternion target = Quaternion.Euler(0, turnRadius , 0);
-            //transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 2.0f);
-
-            transform.Rotate(transform.up, bullStats.TurnRate * Time.deltaTime);
             RTap = true;
-
         }
-
         if (CrossPlatformInputManager.GetButtonUp("Right"))
         {
             RTap = false;
             transform.rotation = Quaternion.identity;
-            t = 0;
         }
-        if (RTap == true)
-            transform.Rotate(transform.up, +bullStats.TurnRate * Time.deltaTime);
-
+        if (RTap)
+        {
+            float rotY = (transform.eulerAngles.y) * bullStats.TurnRate * Time.deltaTime;
+            Debug.Log(rotY);
+            if (rHit)
+                transform.rotation = Quaternion.identity;
+            else if (rotY < maxAngle)
+                transform.Rotate(transform.up, bullStats.TurnRate * Time.deltaTime);
+            
+        }
 
 
         if (CrossPlatformInputManager.GetButtonDown("Left"))
         {
-            //    var posi = transform.position;
-            //    posi.x = transform.position.x - turnRate * Time.deltaTime;
-            //    transform.position = posi;
-
-            //    Quaternion target = Quaternion.Euler(0, -turnRate, 0);
-            //    transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 2.0f);
             LTap = true;
         }
-
         if (CrossPlatformInputManager.GetButtonUp("Left"))
         {
             transform.rotation = Quaternion.identity;
             LTap = false;
         }
+        if (LTap)
+        {
+            float rotY = transform.eulerAngles.y != 0f ? (transform.eulerAngles.y - 360f) * bullStats.TurnRate * Time.deltaTime : 0;
+            Debug.Log(rotY);
+            if (lHit)
+                transform.rotation = Quaternion.identity;
+            else if (rotY > minAngle)
+                transform.Rotate(transform.up, -bullStats.TurnRate * Time.deltaTime);
+        }
 
-        if (LTap == true)
-            transform.Rotate(transform.up, -bullStats.TurnRate * Time.deltaTime);
-
-
+        transform.Translate(transform.forward * currentSpeed * Time.deltaTime);
     }
 
 
