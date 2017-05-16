@@ -6,7 +6,7 @@ PlayerSettings:
   serializedVersion: 11
   productGUID: ebee529a61f55fc4e9d5cc433e813e4b
   AndroidProfiler: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -216,7 +216,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/user.keystore
+  AndroidKeystoreName: H:/Projects/Dariyal Games/Jallikattu/Assets/user.keystore
   AndroidKeyaliasName: jallikattu
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
