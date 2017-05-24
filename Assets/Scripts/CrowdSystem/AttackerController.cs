@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Dariyal.Framework.Events;
+using UnityEngine;
 
 public class AttackerController : MonoBehaviour
 {
