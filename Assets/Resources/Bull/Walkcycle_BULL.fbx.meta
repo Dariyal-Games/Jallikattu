@@ -1,0 +1,578 @@
+fileFormatVersion: 2
+guid: da95ff86e1cb54f6196af5a71736d82c
+timeCreated: 1495122979
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: anim_chest
+    100002: anim_head
+    100004: anim_hip
+    100006: anim_hump
+    100008: anim_left_back_leg
+    100010: anim_left_back_leg 1
+    100012: anim_left_back_leg_pv
+    100014: anim_left_ear
+    100016: anim_left_eye
+    100018: anim_left_front_leg
+    100020: anim_left_front_leg 1
+    100022: anim_left_front_leg_pv
+    100024: anim_left_horn
+    100026: anim_right_back_leg
+    100028: anim_right_back_leg 1
+    100030: anim_right_back_leg_pv
+    100032: anim_right_ear
+    100034: anim_right_eye
+    100036: anim_right_front_leg
+    100038: anim_right_front_leg 1
+    100040: anim_right_front_leg_pv
+    100042: anim_right_horn
+    100044: anim_tail_a
+    100046: anim_tail_b
+    100048: anim_tail_c
+    100050: anim_tail_d
+    100052: anim_tail_e
+    100054: back feet right
+    100056: back foot left
+    100058: back leg left
+    100060: back leg right
+    100062: body
+    100064: Bull_Rig01
+    100066: Bull_rig01
+    100068: Camera
+    100070: Chest_jnt
+    100072: COG_jnt
+    100074: controls
+    100076: Cube
+    100078: Cube.001
+    100080: Cube.002
+    100082: Cube.003
+    100084: front foot left
+    100086: front foot right
+    100088: front leg left
+    100090: front leg right
+    100092: grp_anim_left_back_leg_pv
+    100094: grp_anim_left_front_leg_pv
+    100096: grp_anim_right_back_leg_pv
+    100098: grp_anim_right_front_leg_pv
+    100100: head_baseJnt
+    100102: head_endJnt
+    100104: Hemi
+    100106: hump
+    100108: hump_endJnt
+    100110: hump_jnt
+    100112: ik_s
+    100114: imagePlane1
+    100116: joint2
+    100118: joint2 1
+    100120: joint6
+    100122: joint6 1
+    100124: Lamp
+    100126: 'left horn '
+    100128: left_back_leg_ankle_endJnt
+    100130: left_back_leg_ankle_jnt
+    100132: left_back_leg_hip01_jnt
+    100134: left_back_leg_knee_jnt
+    100136: left_ear_jnt
+    100138: left_eye
+    100140: left_eyeEnd
+    100142: left_front_ankle_endJnt
+    100144: left_front_ankle_jnt
+    100146: left_front_knee_jnt
+    100148: left_front_leg_hip01_jnt
+    100150: left_front_leg_hip02_jnt
+    100152: left_front_leg_hip03_jnt
+    100154: left_horn_jnt
+    100156: mesh
+    100158: pPlane1
+    100160: pPlane2
+    100162: pSphere1
+    100164: right horn
+    100166: right_back_leg_ankle_endJnt
+    100168: right_back_leg_ankle_jnt
+    100170: right_back_leg_hip01_jnt
+    100172: right_back_leg_knee_jnt
+    100174: right_ear_jnt
+    100176: right_eye
+    100178: right_eyeEnd
+    100180: right_front_ankle_endJnt
+    100182: right_front_ankle_jnt
+    100184: right_front_knee_jnt
+    100186: right_front_leg_hip01_jnt
+    100188: right_front_leg_hip02_jnt
+    100190: right_front_leg_hip03_jnt
+    100192: right_horn_jnt
+    100194: skeleton
+    100196: tail
+    100198: tail_a_jnt
+    100200: tail_b_jnt
+    100202: tail_c_jnt
+    100204: tail_d_jnt
+    100206: tail_e_jnt
+    100208: tail_f_jnt
+    100210: tail_g_endJnt
+    100212: //RootNode
+    400000: anim_chest
+    400002: anim_head
+    400004: anim_hip
+    400006: anim_hump
+    400008: anim_left_back_leg
+    400010: anim_left_back_leg 1
+    400012: anim_left_back_leg_pv
+    400014: anim_left_ear
+    400016: anim_left_eye
+    400018: anim_left_front_leg
+    400020: anim_left_front_leg 1
+    400022: anim_left_front_leg_pv
+    400024: anim_left_horn
+    400026: anim_right_back_leg
+    400028: anim_right_back_leg 1
+    400030: anim_right_back_leg_pv
+    400032: anim_right_ear
+    400034: anim_right_eye
+    400036: anim_right_front_leg
+    400038: anim_right_front_leg 1
+    400040: anim_right_front_leg_pv
+    400042: anim_right_horn
+    400044: anim_tail_a
+    400046: anim_tail_b
+    400048: anim_tail_c
+    400050: anim_tail_d
+    400052: anim_tail_e
+    400054: back feet right
+    400056: back foot left
+    400058: back leg left
+    400060: back leg right
+    400062: body
+    400064: Bull_Rig01
+    400066: Bull_rig01
+    400068: Camera
+    400070: Chest_jnt
+    400072: COG_jnt
+    400074: controls
+    400076: Cube
+    400078: Cube.001
+    400080: Cube.002
+    400082: Cube.003
+    400084: front foot left
+    400086: front foot right
+    400088: front leg left
+    400090: front leg right
+    400092: grp_anim_left_back_leg_pv
+    400094: grp_anim_left_front_leg_pv
+    400096: grp_anim_right_back_leg_pv
+    400098: grp_anim_right_front_leg_pv
+    400100: head_baseJnt
+    400102: head_endJnt
+    400104: Hemi
+    400106: hump
+    400108: hump_endJnt
+    400110: hump_jnt
+    400112: ik_s
+    400114: imagePlane1
+    400116: joint2
+    400118: joint2 1
+    400120: joint6
+    400122: joint6 1
+    400124: Lamp
+    400126: 'left horn '
+    400128: left_back_leg_ankle_endJnt
+    400130: left_back_leg_ankle_jnt
+    400132: left_back_leg_hip01_jnt
+    400134: left_back_leg_knee_jnt
+    400136: left_ear_jnt
+    400138: left_eye
+    400140: left_eyeEnd
+    400142: left_front_ankle_endJnt
+    400144: left_front_ankle_jnt
+    400146: left_front_knee_jnt
+    400148: left_front_leg_hip01_jnt
+    400150: left_front_leg_hip02_jnt
+    400152: left_front_leg_hip03_jnt
+    400154: left_horn_jnt
+    400156: mesh
+    400158: pPlane1
+    400160: pPlane2
+    400162: pSphere1
+    400164: right horn
+    400166: right_back_leg_ankle_endJnt
+    400168: right_back_leg_ankle_jnt
+    400170: right_back_leg_hip01_jnt
+    400172: right_back_leg_knee_jnt
+    400174: right_ear_jnt
+    400176: right_eye
+    400178: right_eyeEnd
+    400180: right_front_ankle_endJnt
+    400182: right_front_ankle_jnt
+    400184: right_front_knee_jnt
+    400186: right_front_leg_hip01_jnt
+    400188: right_front_leg_hip02_jnt
+    400190: right_front_leg_hip03_jnt
+    400192: right_horn_jnt
+    400194: skeleton
+    400196: tail
+    400198: tail_a_jnt
+    400200: tail_b_jnt
+    400202: tail_c_jnt
+    400204: tail_d_jnt
+    400206: tail_e_jnt
+    400208: tail_f_jnt
+    400210: tail_g_endJnt
+    400212: //RootNode
+    2300000: pPlane1
+    2300002: pPlane2
+    2300004: pSphere1
+    3300000: pPlane1
+    3300002: pPlane2
+    3300004: pSphere1
+    4300000: Cube.003
+    4300002: Cube.002
+    4300004: Cube.001
+    4300006: Cube
+    4300008: front foot left
+    4300010: front foot right
+    4300012: back foot left
+    4300014: back feet right
+    4300016: front leg left
+    4300018: back leg left
+    4300020: back leg right
+    4300022: front leg right
+    4300024: tail
+    4300026: 'left horn '
+    4300028: right horn
+    4300030: hump
+    4300032: body
+    4300034: pSphere1
+    4300036: pPlane1
+    4300038: pPlane2
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: back feet right
+    13700002: back foot left
+    13700004: back leg left
+    13700006: back leg right
+    13700008: body
+    13700010: Cube
+    13700012: Cube.001
+    13700014: Cube.002
+    13700016: Cube.003
+    13700018: front foot left
+    13700020: front foot right
+    13700022: front leg left
+    13700024: front leg right
+    13700026: hump
+    13700028: 'left horn '
+    13700030: right horn
+    13700032: tail
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bull_rig01
+        weight: 1
+      - path: Bull_rig01/Bull_Rig01
+        weight: 1
+      - path: Bull_rig01/controls
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_chest
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_chest/anim_head
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_chest/anim_head/anim_left_ear
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_chest/anim_head/anim_left_eye
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_chest/anim_head/anim_left_horn
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_chest/anim_head/anim_right_ear
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_chest/anim_head/anim_right_eye
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_chest/anim_head/anim_right_horn
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_hump
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_tail_a
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_tail_a/anim_tail_b
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_tail_a/anim_tail_b/anim_tail_c
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_tail_a/anim_tail_b/anim_tail_c/anim_tail_d
+        weight: 1
+      - path: Bull_rig01/controls/anim_hip/anim_tail_a/anim_tail_b/anim_tail_c/anim_tail_d/anim_tail_e
+        weight: 1
+      - path: Bull_rig01/controls/anim_left_back_leg
+        weight: 1
+      - path: Bull_rig01/controls/anim_left_front_leg
+        weight: 1
+      - path: Bull_rig01/controls/anim_right_back_leg
+        weight: 1
+      - path: Bull_rig01/controls/anim_right_front_leg
+        weight: 1
+      - path: Bull_rig01/controls/grp_anim_left_back_leg_pv
+        weight: 1
+      - path: Bull_rig01/controls/grp_anim_left_back_leg_pv/anim_left_back_leg_pv
+        weight: 1
+      - path: Bull_rig01/controls/grp_anim_left_front_leg_pv
+        weight: 1
+      - path: Bull_rig01/controls/grp_anim_left_front_leg_pv/anim_left_front_leg_pv
+        weight: 1
+      - path: Bull_rig01/controls/grp_anim_right_back_leg_pv
+        weight: 1
+      - path: Bull_rig01/controls/grp_anim_right_back_leg_pv/anim_right_back_leg_pv
+        weight: 1
+      - path: Bull_rig01/controls/grp_anim_right_front_leg_pv
+        weight: 1
+      - path: Bull_rig01/controls/grp_anim_right_front_leg_pv/anim_right_front_leg_pv
+        weight: 1
+      - path: Bull_rig01/ik_s
+        weight: 1
+      - path: Bull_rig01/ik_s/anim_left_back_leg 1
+        weight: 1
+      - path: Bull_rig01/ik_s/anim_left_front_leg 1
+        weight: 1
+      - path: Bull_rig01/ik_s/anim_right_back_leg 1
+        weight: 1
+      - path: Bull_rig01/ik_s/anim_right_front_leg 1
+        weight: 1
+      - path: Bull_rig01/mesh
+        weight: 1
+      - path: Bull_rig01/mesh/back feet right
+        weight: 1
+      - path: Bull_rig01/mesh/back foot left
+        weight: 1
+      - path: Bull_rig01/mesh/back leg left
+        weight: 1
+      - path: Bull_rig01/mesh/back leg right
+        weight: 1
+      - path: Bull_rig01/mesh/body
+        weight: 1
+      - path: Bull_rig01/mesh/Cube
+        weight: 1
+      - path: Bull_rig01/mesh/Cube.001
+        weight: 1
+      - path: Bull_rig01/mesh/Cube.002
+        weight: 1
+      - path: Bull_rig01/mesh/Cube.003
+        weight: 1
+      - path: Bull_rig01/mesh/front foot left
+        weight: 1
+      - path: Bull_rig01/mesh/front foot right
+        weight: 1
+      - path: Bull_rig01/mesh/front leg left
+        weight: 1
+      - path: Bull_rig01/mesh/front leg right
+        weight: 1
+      - path: Bull_rig01/mesh/hump
+        weight: 1
+      - path: 'Bull_rig01/mesh/left horn '
+        weight: 1
+      - path: Bull_rig01/mesh/right horn
+        weight: 1
+      - path: Bull_rig01/mesh/tail
+        weight: 1
+      - path: Bull_rig01/skeleton
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/head_endJnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/left_ear_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/left_ear_jnt/joint2
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/left_eye
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/left_eye/left_eyeEnd
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/left_horn_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/left_horn_jnt/joint6
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/right_ear_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/right_ear_jnt/joint2
+          1
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/right_eye
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/right_eye/right_eyeEnd
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/right_horn_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/head_baseJnt/right_horn_jnt/joint6
+          1
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/hump_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/hump_jnt/hump_endJnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/left_front_leg_hip01_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/left_front_leg_hip01_jnt/left_front_leg_hip02_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/left_front_leg_hip01_jnt/left_front_leg_hip02_jnt/left_front_leg_hip03_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/left_front_leg_hip01_jnt/left_front_leg_hip02_jnt/left_front_leg_hip03_jnt/left_front_knee_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/left_front_leg_hip01_jnt/left_front_leg_hip02_jnt/left_front_leg_hip03_jnt/left_front_knee_jnt/left_front_ankle_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/left_front_leg_hip01_jnt/left_front_leg_hip02_jnt/left_front_leg_hip03_jnt/left_front_knee_jnt/left_front_ankle_jnt/left_front_ankle_endJnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/right_front_leg_hip01_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/right_front_leg_hip01_jnt/right_front_leg_hip02_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/right_front_leg_hip01_jnt/right_front_leg_hip02_jnt/right_front_leg_hip03_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/right_front_leg_hip01_jnt/right_front_leg_hip02_jnt/right_front_leg_hip03_jnt/right_front_knee_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/right_front_leg_hip01_jnt/right_front_leg_hip02_jnt/right_front_leg_hip03_jnt/right_front_knee_jnt/right_front_ankle_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/Chest_jnt/right_front_leg_hip01_jnt/right_front_leg_hip02_jnt/right_front_leg_hip03_jnt/right_front_knee_jnt/right_front_ankle_jnt/right_front_ankle_endJnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/left_back_leg_hip01_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/left_back_leg_hip01_jnt/left_back_leg_knee_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/left_back_leg_hip01_jnt/left_back_leg_knee_jnt/left_back_leg_ankle_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/left_back_leg_hip01_jnt/left_back_leg_knee_jnt/left_back_leg_ankle_jnt/left_back_leg_ankle_endJnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/right_back_leg_hip01_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/right_back_leg_hip01_jnt/right_back_leg_knee_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/right_back_leg_hip01_jnt/right_back_leg_knee_jnt/right_back_leg_ankle_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/right_back_leg_hip01_jnt/right_back_leg_knee_jnt/right_back_leg_ankle_jnt/right_back_leg_ankle_endJnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/tail_a_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/tail_a_jnt/tail_b_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/tail_a_jnt/tail_b_jnt/tail_c_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/tail_a_jnt/tail_b_jnt/tail_c_jnt/tail_d_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/tail_a_jnt/tail_b_jnt/tail_c_jnt/tail_d_jnt/tail_e_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/tail_a_jnt/tail_b_jnt/tail_c_jnt/tail_d_jnt/tail_e_jnt/tail_f_jnt
+        weight: 1
+      - path: Bull_rig01/skeleton/COG_jnt/tail_a_jnt/tail_b_jnt/tail_c_jnt/tail_d_jnt/tail_e_jnt/tail_f_jnt/tail_g_endJnt
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Hemi
+        weight: 1
+      - path: imagePlane1
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: pPlane1
+        weight: 1
+      - path: pPlane2
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
