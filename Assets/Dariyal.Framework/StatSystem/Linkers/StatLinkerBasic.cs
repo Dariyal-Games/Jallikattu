@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Dariyal.StatSystem
+namespace Dariyal.Framework.StatSystem
 {
     public class StatLinkerBasic : StatLinker
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Dariyal.Pooler
+namespace Dariyal.Framework.Pooler
 {
     public class ObjectPool : ScriptableObject
     {

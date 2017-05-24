@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Dariyal.StatSystem
+namespace Dariyal.Framework.StatSystem
 {
     public class ModifiableStat : Stat, IModifiableStat, IStatValueChange
     {

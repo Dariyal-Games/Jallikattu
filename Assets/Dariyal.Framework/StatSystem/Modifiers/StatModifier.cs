@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dariyal.StatSystem
+namespace Dariyal.Framework.StatSystem
 {
     public abstract class StatModifier
     {

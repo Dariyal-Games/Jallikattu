@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Dariyal.StatSystem
+namespace Dariyal.Framework.StatSystem
 {
     /// <summary>
     /// Collection of stats.

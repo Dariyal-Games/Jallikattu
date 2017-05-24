@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Dariyal.StatSystem
+namespace Dariyal.Framework.StatSystem
 {
     public class Attribute : ModifiableStat, IStatScalable, IStatLinkable
     {

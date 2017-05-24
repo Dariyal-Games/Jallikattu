@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Dariyal.StatSystem
+namespace Dariyal.Framework.StatSystem
 {
     public class Vital : Attribute, IStatCurrentValueChange
     {

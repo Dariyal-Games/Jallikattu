@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-namespace Dariyal.StatSystem
+namespace Dariyal.Framework.StatSystem
 {
     public abstract class StatLinker : IStatValueChange
     {

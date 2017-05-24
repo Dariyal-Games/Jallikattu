@@ -1,4 +1,4 @@
-﻿namespace Dariyal.StatSystem
+﻿namespace Dariyal.Framework.StatSystem
 {
     public interface IStatLinkable
     {
