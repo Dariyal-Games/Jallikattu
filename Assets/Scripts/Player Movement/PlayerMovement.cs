@@ -23,6 +23,18 @@ public class PlayerMovement : MonoBehaviour
 
     Stats bullStats;
 
+    public float CurrentSpeed
+    {
+        get
+        {
+            return currentSpeed;
+        }
+
+        set
+        {
+            currentSpeed = value;
+        }
+    }
 
     // Use this for initialization
     void Start()
@@ -85,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
                 transform.Rotate(transform.up, -bullStats.TurnRate * Time.deltaTime);
         }
 
+        //currentSpeed = Mathf.Clamp(currentSpeed, bullStats.MinSpeed, bullStats.MaxSpeed);
         transform.Translate(transform.forward * currentSpeed * Time.deltaTime);
     }
 
@@ -102,5 +115,17 @@ public class PlayerMovement : MonoBehaviour
         currentSpeed = Mathf.Clamp(currentSpeed, bullStats.MinSpeed, bullStats.MaxSpeed);
     }
 
+    public IEnumerator TemporarySpeedBoost(float deltaSpeed, float duration)
+    {
+        float oldSpeedValue = currentSpeed;
+        currentSpeed += deltaSpeed;
+        yield return new WaitForSeconds(duration);
+        currentSpeed = oldSpeedValue;
+    }
 
+    public void AddTemporarySpeedBoost(float deltaSpeed, float duration)
+    {
+        //StopCoroutine("TemporarySpeedBoost");
+        StartCoroutine(TemporarySpeedBoost(deltaSpeed, duration));
+    }
 }

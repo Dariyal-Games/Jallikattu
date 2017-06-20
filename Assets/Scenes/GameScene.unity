@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4506703, g: 0.5006316, b: 0.5749303, a: 1}
+  m_IndirectSpecularColor: {r: 0.45067, g: 0.5006308, b: 0.5749297, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2890,6 +2890,47 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 898638001}
   m_Mesh: {fileID: 4300008, guid: 2f9efe2c1df7bb349ae464c2a5fe09ca, type: 3}
+--- !u!1 &905004293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 905004294}
+  - component: {fileID: 905004295}
+  m_Layer: 0
+  m_Name: PowerUpGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905004294
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 905004293}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3.994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1324657604}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905004295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 905004293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e33420678313f4f9eec30fb12f0d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedPower: {fileID: 1212502295030100, guid: e4c450c684a78424890650b80d3cdaaa, type: 2}
 --- !u!1 &915139376
 GameObject:
   m_ObjectHideFlags: 0
@@ -4521,6 +4562,7 @@ Transform:
   m_Children:
   - {fileID: 381447303}
   - {fileID: 1878412535}
+  - {fileID: 905004294}
   m_Father: {fileID: 986934293}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
