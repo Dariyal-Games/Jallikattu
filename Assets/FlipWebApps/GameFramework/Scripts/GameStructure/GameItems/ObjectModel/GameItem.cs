@@ -207,10 +207,8 @@ namespace GameFramework.GameStructure.GameItems.ObjectModel
         List<LocalisableSpriteEntry> _localisableSprites = new List<LocalisableSpriteEntry>();
 
         /// <summary>
-        /// A value that is needed to unlock this item.
+        /// A list of custom variables for this game item.
         /// </summary>
-        /// Typically this will be the number of coins that you need to collect before being able to unlock this item. A value of
-        /// -1 means that you can not unlock this item in this way.
         public Variables.ObjectModel.Variables Variables
         {
             get
@@ -284,7 +282,7 @@ namespace GameFramework.GameStructure.GameItems.ObjectModel
             {
                 if (LocalisableName.IsLocalisedWithNoKey())
                 {
-                    var value = LocaliseText.Get(FullKey("Name"), missingReturnsNull: true);
+                    var value = GlobalLocalisation.GetText(FullKey("Name"));
                     if (value == null) return IdentifierBase + " " + Number;
                     return value;
                 }
@@ -300,7 +298,7 @@ namespace GameFramework.GameStructure.GameItems.ObjectModel
         {
             get
             {
-                return LocalisableDescription.IsLocalisedWithNoKey() ? LocaliseText.Get(FullKey("Desc")) : LocalisableDescription.GetValue();
+                return LocalisableDescription.IsLocalisedWithNoKey() ? GlobalLocalisation.GetText(FullKey("Desc"), missingReturnsKey: true) : LocalisableDescription.GetValue();
             }
         }
 
@@ -506,6 +504,7 @@ namespace GameFramework.GameStructure.GameItems.ObjectModel
             _isPlayer = IdentifierBase == "Player";
 
             // if not already set and not a player game item then set Player to the current player so that we can have per player scores etc.
+            if (player == null) Assert.IsTrue(GameManager.IsActive, "You need to add a GameManager to your scene and possibly increase the priority in ScriptExecutionOrder");
             Player = player ?? GameManager.Instance.Player;
 
             PrefsPrefixShared = IdentifierBasePrefs + Number + ".";

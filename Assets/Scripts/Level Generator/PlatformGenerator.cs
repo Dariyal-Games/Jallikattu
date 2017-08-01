@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using ProPooling;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,8 +37,16 @@ public class PlatformGenerator : MonoBehaviour
     {
         GameObject prefab = GetNewRandomPlatform();
 
-        GameObject go = Instantiate(prefab, currentEndPoint.position, Quaternion.identity, platformHolder);
+        //GameObject go = Instantiate(prefab, currentEndPoint.position, Quaternion.identity, platformHolder);
+        GameObject go = PoolManager.Instance.GetPool(prefab).GetFromPool(currentEndPoint.position, Quaternion.identity, platformHolder);
+        go.GetComponent<PlatformDestroyer>().EndReached += DestroyPlatform;
         currentEndPoint = go.transform.Find("EndPoint");
+    }
+
+    private void DestroyPlatform(PlatformDestroyer obj)
+    {
+        obj.EndReached -= DestroyPlatform;
+
     }
 
     GameObject GetNewRandomPlatform()

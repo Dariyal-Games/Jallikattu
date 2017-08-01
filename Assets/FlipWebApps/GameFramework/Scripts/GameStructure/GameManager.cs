@@ -21,6 +21,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using GameFramework.Debugging;
 using GameFramework.Display.Placement;
@@ -41,7 +42,6 @@ using GameFramework.GameStructure.Game.Messages;
 using GameFramework.Preferences;
 using GameFramework.Audio.Messages;
 using GameFramework.GameStructure.GameItems.Messages;
-
 #pragma warning disable 618
 
 #if BEAUTIFUL_TRANSITIONS
@@ -62,7 +62,7 @@ namespace GameFramework.GameStructure
         /// <summary>
         ///  different ways that we can load the different GameItems
         /// </summary>
-        public enum GameItemSetupMode { None, Automatic, FromResources, Specified }
+        public enum GameItemSetupMode { None, Automatic, FromResources, Specified, MasterWithOverrides }
 
         // Inspector Values
         #region General 
@@ -268,6 +268,18 @@ namespace GameFramework.GameStructure
         public int CoinsToUnlockLevels = 10;
 
         /// <summary>
+        /// A master level configuration file that is used as the basis for setting up levels.
+        /// </summary>
+        [Tooltip("A master level configuration file that is used as the basis for setting up levels.")]
+        public Level LevelMaster;
+
+        /// <summary>
+        /// A master level configuration file that is used as the basis for setting up levels.
+        /// </summary>
+        [Tooltip("A master level configuration file that is used as the basis for setting up levels.")]
+        public List<NumberedLevelReference> NumberedLevelReferences;
+
+        /// <summary>
         /// How we want characters to be setup.
         /// </summary>
         /// None - don't setup characters.
@@ -314,10 +326,19 @@ namespace GameFramework.GameStructure
         /// <summary>
         /// A list of localisation languages that we support
         /// </summary>
-        [Tooltip("A list of localisation languages that we support")]
+        [Obsolete("v4.4 Obsolete - Set and access through GlobalLocalisation instead.")]
         public string[] SupportedLanguages;
 
         #endregion Localisation Inspector Values
+        #region Global Variables
+
+        /// <summary>
+        /// A list of custom variables for this game item.
+        /// </summary>
+        [Tooltip("A list of custom variables for this game item.")]
+        public Variables.ObjectModel.Variables Variables;
+
+        #endregion Global Variables
 
         // Various properties
         #region GamePlay properties
@@ -609,11 +630,6 @@ namespace GameFramework.GameStructure
             // display related properties
             SetDisplayProperties();
 
-
-            // Localisation setup. If nothing stored then use system Language if it exists. Otherwise we will default to English.
-            LocaliseText.AllowedLanguages = SupportedLanguages;
-
-
             // setup players
             Players = new PlayerGameItemManager();
             if (PlayerSetupMode == GameItemSetupMode.Automatic)
@@ -694,6 +710,8 @@ namespace GameFramework.GameStructure
                     Levels.Load(1, NumberOfAutoCreatedLevels);
                 else if (LevelSetupMode == GameItemSetupMode.Specified)
                     Debug.LogError("Level 'Specified' setup mode is not currently implemented. Use one of the other modes for now.");
+                else if (LevelSetupMode == GameItemSetupMode.MasterWithOverrides)
+                    Levels.LoadMasterWithOverrides(1, NumberOfAutoCreatedLevels, LevelMaster, NumberedLevelReferences.ToArray());
             }
 
 

@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatformDestroyer : MonoBehaviour
 {
+    public event Action<PlatformDestroyer> EndReached;
+
     private Transform destructionPoint;
 
     // Use this for initialization
@@ -17,6 +20,12 @@ public class PlatformDestroyer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z < destructionPoint.position.z) Destroy(gameObject);
+        if (transform.position.z < destructionPoint.position.z)
+        {
+            if (EndReached != null)
+            {
+                EndReached(this);
+            }
+        }
     }
 }

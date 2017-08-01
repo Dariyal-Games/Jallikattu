@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum StatType
-{
-
-}
-
 public class Stats : MonoBehaviour
 {
 

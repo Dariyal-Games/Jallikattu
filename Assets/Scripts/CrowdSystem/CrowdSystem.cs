@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 
-public class CrowdSystem : MonoBehaviour
+namespace Dariyal.Jallikattu
 {
-    public Transform personToAttach;
-
-    void OnTriggerEnter(Collider other)
+    public class CrowdSystem : MonoBehaviour
     {
-        if (other.gameObject.tag == "Player")
+        public Transform personToAttach;
+
+        void OnTriggerEnter(Collider other)
         {
-            personToAttach.GetComponent<AttackerController>().AttackBull(other.gameObject.GetComponent<BullController>());
+            if (other.gameObject.tag == "Player")
+            {
+                personToAttach.GetComponent<AttackerController>().AttackBull(other.gameObject.GetComponent<BullController>());
+            }
         }
     }
 }
