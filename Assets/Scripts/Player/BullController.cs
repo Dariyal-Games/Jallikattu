@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Dariyal.Framework.StatSystem;
+using Dariyal.Jallikattu.Stat;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,12 +11,12 @@ namespace Dariyal.Jallikattu
         public Transform attachPoint;
         private AttackerController attacker;
         private PlayerMovement playerMovement;
-        private Stats playerStats;
+        private BullStats playerStats;
 
         void Start()
         {
             playerMovement = GetComponent<PlayerMovement>();
-            playerStats = GetComponent<Stats>();
+            playerStats = GetComponent<BullStats>();
 
             if (attachPoint == null) throw new System.Exception("Attach Point not set.");
         }
@@ -29,9 +31,24 @@ namespace Dariyal.Jallikattu
             return attacker;
         }
 
-        public void IncreaseSpeed(float speed, float duration)
+        public void AddPermanantModifier(StatType stat, StatModifier modifier)
         {
-            playerMovement.AddTemporarySpeedBoost(speed, duration);
+            playerStats.AddPermanentModifier(stat, modifier);
+        }
+
+        public void AddTemporaryModifier(StatType stat, StatModifier modifier, float duration)
+        {
+            playerStats.AddTemporaryModifier(stat, modifier, duration);
+        }
+
+        public void RemoveModifier(StatType stat, StatModifier modifier)
+        {
+            playerStats.RemoveModifier(stat, modifier);
+        }
+
+        public void OnSpeedupPowerup(float deltaSpeed, float duration)
+        {
+            playerMovement.AddTemporarySpeedBoost(deltaSpeed, duration);
         }
     }
 }

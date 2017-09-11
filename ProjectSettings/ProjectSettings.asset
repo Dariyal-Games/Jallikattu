@@ -76,6 +76,7 @@ PlayerSettings:
   forceSingleInstance: 0
   resizableWindow: 0
   useMacAppStoreValidation: 0
+  macAppStoreCategory: public.app-category.games
   gpuSkinning: 0
   graphicsJobs: 0
   xboxPIXTextureCapture: 0
@@ -209,6 +210,7 @@ PlayerSettings:
   iOSMetalForceHardShadows: 0
   metalEditorSupport: 1
   metalAPIValidation: 1
+  iOSRenderExtraFrameOnPause: 1
   appleDeveloperTeamID: 
   iOSManualSigningProvisioningProfileID: 
   tvOSManualSigningProvisioningProfileID: 
@@ -259,6 +261,7 @@ PlayerSettings:
   wiiUGamePadStartupScreen: {fileID: 0}
   wiiUDrcBufferDisabled: 0
   wiiUProfilerLibPath: 
+  playModeTestRunnerEnabled: 0
   actionOnDotNetUnhandledException: 1
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
@@ -505,26 +508,28 @@ PlayerSettings:
   webGLUseWasm: 0
   webGLCompressionFormat: 1
   scriptingDefineSymbols:
-    1: CROSS_PLATFORM_INPUT
-    2: 
-    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    1: CROSS_PLATFORM_INPUT;PRO_POOLING
+    2: PRO_POOLING
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT;PRO_POOLING;PRO_POOLING
     5: 
     6: 
-    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT;PRO_POOLING
     9: 
-    13: 
-    14: MOBILE_INPUT
+    13: PRO_POOLING
+    14: MOBILE_INPUT;PRO_POOLING;PRO_POOLING
     15: 
     16: 
-    17: MOBILE_INPUT
-    18: 
-    19: 
-    20: MOBILE_INPUT
-    21: 
-    22: MOBILE_INPUT
-    23: 
-    24: 
-    25: 
+    17: MOBILE_INPUT;PRO_POOLING
+    18: PRO_POOLING
+    19: PRO_POOLING
+    20: MOBILE_INPUT;PRO_POOLING
+    21: PRO_POOLING
+    22: MOBILE_INPUT;PRO_POOLING
+    23: PRO_POOLING
+    24: PRO_POOLING
+    25: PRO_POOLING
+    26: PRO_POOLING
+    27: PRO_POOLING
   platformArchitecture:
     iOS: 2
     tvOS: 1

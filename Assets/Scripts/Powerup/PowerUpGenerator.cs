@@ -3,18 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Dariyal.Jallikattu {
+namespace Dariyal.Jallikattu
+{
     public class PowerUpGenerator : MonoBehaviour
     {
         private Settings _settings;
         private float _timeSinceLastSpawn;
+        private bool _init;
 
         private void Update()
         {
+            if (!_init) return;
+
             if (_timeSinceLastSpawn > _settings.spawnDelay)
             {
                 GeneratePowerup();
+                _timeSinceLastSpawn = 0;
             }
+
+            _timeSinceLastSpawn += Time.deltaTime;
         }
 
         public void Init(Settings settings)
@@ -22,13 +29,14 @@ namespace Dariyal.Jallikattu {
             _settings = settings;
 
             Reset();
+            _init = true;
         }
 
         public void GeneratePowerup()
         {
             GameObject prefab = GetNewRandomPowerup();
-
-            GameObject go = PoolManager.Instance.GetPool(prefab).GetFromPool(transform.position, Quaternion.identity, _settings.holder.transform);
+            Vector3 spawnPosition = transform.position;
+            GameObject go = PoolManager.Instance.GetPool(prefab).GetFromPool(spawnPosition, Quaternion.identity, _settings.holder.transform);
         }
 
         GameObject GetNewRandomPowerup()

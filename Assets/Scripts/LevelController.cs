@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelController : MonoBehaviour {
+namespace Dariyal.Jallikattu
+{
+    public class LevelController : MonoBehaviour
+    {
+        public PowerUpGenerator.Settings powerupSettings;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        // Use this for initialization
+        void Start()
+        {
+            var powerupGen = FindObjectOfType<PowerUpGenerator>();
+            powerupGen.Init(powerupSettings);
+        }
+    }
 }

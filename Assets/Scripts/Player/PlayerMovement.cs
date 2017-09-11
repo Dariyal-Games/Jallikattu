@@ -16,6 +16,8 @@ namespace Dariyal.Jallikattu
         float acceleration = 10;
         float deceleration = 1;
         float turnRate = 30f;
+        float lastDeltaSpeed;
+        bool boosted;
         bool LTap;
         bool RTap;
         bool press;
@@ -116,17 +118,25 @@ namespace Dariyal.Jallikattu
             currentSpeed = Mathf.Clamp(currentSpeed, bullStats.MinSpeed, bullStats.MaxSpeed);
         }
 
-        public IEnumerator TemporarySpeedBoost(float deltaSpeed, float duration)
+        private IEnumerator TemporarySpeedBoost(float deltaSpeed, float duration)
         {
-            float oldSpeedValue = currentSpeed;
             currentSpeed += deltaSpeed;
+            lastDeltaSpeed = deltaSpeed;
+            boosted = true;
             yield return new WaitForSeconds(duration);
-            currentSpeed = oldSpeedValue;
+            StopSpeedBoost();
+        }
+
+        private void StopSpeedBoost()
+        {
+            currentSpeed -= lastDeltaSpeed;
+            boosted = false;
         }
 
         public void AddTemporarySpeedBoost(float deltaSpeed, float duration)
         {
-            //StopCoroutine("TemporarySpeedBoost");
+            if (boosted) return;
+
             StartCoroutine(TemporarySpeedBoost(deltaSpeed, duration));
         }
     }

@@ -13,7 +13,7 @@ namespace Dariyal.Jallikattu
         public override void PowerUpAction(BullController bull)
         {
             Debug.Log("Picked SpeedUp");
-            bull.IncreaseSpeed(speedIncrease, duration);
+            bull.OnSpeedupPowerup(speedIncrease, duration);
         }
 
     }
