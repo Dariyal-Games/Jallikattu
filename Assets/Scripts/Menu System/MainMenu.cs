@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour
 
     public void Options()
     {
-        SceneManager.LoadScene("GameScene");
+        //SceneManager.LoadScene("GameScene");
         // for now we havnt any option list so when  it is ready we will replace with the option scene name.
     }
 
