@@ -44,7 +44,8 @@ namespace Dariyal.Jallikattu
                 if (attackerLatchStrength <= 0)
                 {
                     controller.GetAttacker().LeaveBull();
-                    controller.SetAttacker(null);                    
+                    controller.SetAttacker(null);
+
                     beingAttacked = false;
                 }
             }

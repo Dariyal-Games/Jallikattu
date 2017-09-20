@@ -14,10 +14,5 @@ namespace Dariyal.Jallikattu
             var powerupGen = FindObjectOfType<PowerUpGenerator>();
             powerupGen.Init(powerupSettings);
         }
-
-        public void OnGameOver()
-        {
-            //pause and show go panel.
-        }
     }
 }
