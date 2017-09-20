@@ -427,7 +427,7 @@ namespace GameFramework.UI.Dialogs.Components
                 Time.timeScale = _oldTimeScale;
 
             var sceneName = !string.IsNullOrEmpty(GameManager.Instance.IdentifierBase) && SceneManager.GetActiveScene().name.StartsWith(GameManager.Instance.IdentifierBase + "-") ? SceneManager.GetActiveScene().name.Substring((GameManager.Instance.IdentifierBase + "-").Length) : SceneManager.GetActiveScene().name;
-            GameManager.LoadSceneWithTransitions(sceneName);
+            //GameManager.LoadSceneWithTransitions(sceneName);
         }
     }
 }
