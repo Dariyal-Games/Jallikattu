@@ -41,11 +41,6 @@ public class ScoreManager : MonoBehaviour
         playerScore += num;
     }
 
-    internal object SetScore()
-    {
-        throw new NotImplementedException();
-    }
-
     public int GetScore()
     {
         return playerScore;
