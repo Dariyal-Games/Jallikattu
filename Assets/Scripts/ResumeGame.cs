@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ResumeGame : MonoBehaviour
 {
-    public void ToResumeGame()
-    {
-        Time.timeScale = 1;
-    }
+    //public void ToResumeGame()
+    //{
+    //    Time.timeScale = 1;
+    //}
 
     
 }

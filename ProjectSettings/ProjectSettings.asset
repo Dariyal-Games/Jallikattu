@@ -10,8 +10,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Flip Web Apps
-  productName: Game Framework
+  companyName: Dariyal Games
+  productName: Jallikattu
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
@@ -137,7 +137,7 @@ PlayerSettings:
   protectGraphicsMemory: 0
   useHDRDisplay: 0
   applicationIdentifier:
-    Android: com.Company.ProductName
+    Android: com.DariyalGames.Jallikattu
     Standalone: unity.Flip Web Apps.Game Framework
     Tizen: com.Company.ProductName
     iOS: com.Company.ProductName
@@ -629,8 +629,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: e45640e8-c96f-47d8-ab9e-8d02e1d67b54
-  projectName: Game Framework
+  cloudProjectId: 81b0e4d6-bdd7-409f-b73e-31a920a4f23d
+  projectName: Game Framework (1)
   organizationId: l0rdra1d3n
   cloudEnabled: 0
   enableNewInputSystem: 0

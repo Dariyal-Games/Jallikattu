@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class OnObstacleHit : MonoBehaviour
 {
@@ -12,36 +14,88 @@ public class OnObstacleHit : MonoBehaviour
 
     private bool waitForPlayerResponse = false;
 
+    public bool isGamePaused = false;
+
+    public PauseManager pausing;
+
+    public GameObject button,button1;
+
+    public GameObject gameOverText;
+    public GameObject gamePauseText;
+
     void Start()
     {
         levelController = FindObjectOfType<LevelController>();
-        gameOverPanel.SetActive(false);
-        PauseGame.isPaused = false;        
+        //gameOverPanel.SetActive(false);
+        pausing.pauseCanvas.SetActive(false);
+
+
     }
 
-    
+
     void Update()
     {
-        if(waitForPlayerResponse || PauseGame.isPaused)
+        //if (waitForPlayerResponse /*|| PauseGame.isPaused*/)
+        //{
+        //    Time.timeScale = 0;
+        //}
+        //      else
+        //  {
+        //         Time.timeScale = 1;
+        //     }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Time.timeScale = 0;
+            Debug.Log("WWW");
+            pausing.isPaused = !pausing.isPaused;
         }
-        else
+        if (pausing.isPaused == true)
         {
-            Time.timeScale = 1;
+            Time.timeScale = 0.0f;
+            pausing.pauseCanvas.SetActive(true);
         }
+        else if (pausing.isPaused == false)
+        {
+            Time.timeScale = 1.0f;
+            pausing.pauseCanvas.SetActive(false);
+
+        }
+
     }
+
 
     void OnTriggerEnter(Collider col)
     {
         Debug.Log("CollisionEntered");
         if (col.gameObject.tag == "Obstacle")
         {
-            waitForPlayerResponse = true;
-            gameOverPanel.SetActive(true);            
+            //waitForPlayerResponse = true;
+            // gameOverPanel.SetActive(true);
+            //isGamePaused = !isGamePaused;
+            button.SetActive(false);
+            button1.SetActive(true);
+            gameOverText.SetActive(true);
+            gamePauseText.SetActive(false);
+            //text.SetActive(false);
+            //text.SetActive(true);
+
+            Debug.Log("eee");
+            pausing.isPaused = !pausing.isPaused;
+        
+        if (pausing.isPaused == true)
+        {
+            Time.timeScale = 0.0f;
+            pausing.pauseCanvas.SetActive(true);
+        }
+        else if (pausing.isPaused == false)
+        {
+            Time.timeScale = 1.0f;
+            pausing.pauseCanvas.SetActive(false);
+
         }
     }
-    
+    }
+
     public void OnVideoButtonPressed()
     {        
         waitForPlayerResponse = false;
