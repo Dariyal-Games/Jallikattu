@@ -129,6 +129,7 @@ namespace Dariyal.Jallikattu
 
         private void StopSpeedBoost()
         {
+            SpeedBoost.onBoostMode = false;
             currentSpeed -= lastDeltaSpeed;
             boosted = false;
         }
@@ -138,6 +139,7 @@ namespace Dariyal.Jallikattu
             if (boosted) return;
 
             StartCoroutine(TemporarySpeedBoost(deltaSpeed, duration));
+            //SpeedBoost.onBoostMode = false;
         }
     }
 }

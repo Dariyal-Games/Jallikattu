@@ -13,6 +13,8 @@ namespace Dariyal.Jallikattu
         {
             var powerupGen = FindObjectOfType<PowerUpGenerator>();
             powerupGen.Init(powerupSettings);
+
+
         }
 
         public void OnGameOver()
