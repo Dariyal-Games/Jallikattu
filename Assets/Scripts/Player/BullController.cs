@@ -9,6 +9,7 @@ namespace Dariyal.Jallikattu
     public class BullController : MonoBehaviour
     {
         public Transform attachPoint;
+        public Animator animator;
         private AttackerController attacker;
         private PlayerMovement playerMovement;
         private BullStats playerStats;
@@ -18,6 +19,7 @@ namespace Dariyal.Jallikattu
             playerMovement = GetComponent<PlayerMovement>();
             playerStats = GetComponent<BullStats>();
 
+            if (animator == null) throw new System.Exception("Animator not set");
             if (attachPoint == null) throw new System.Exception("Attach Point not set.");
         }
 
