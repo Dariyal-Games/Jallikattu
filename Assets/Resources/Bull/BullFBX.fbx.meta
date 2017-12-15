@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: 10d9de4d428a0a74c85094cfb5fd814d
+timeCreated: 1513272297
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: back
+    100002: //RootNode
+    100004: BullMDL
+    100006: joint1
+    100008: joint10
+    100010: joint10 1
+    100012: joint11
+    100014: joint11 1
+    100016: joint12
+    100018: joint12 1
+    100020: joint13
+    100022: joint14
+    100024: joint15
+    100026: joint16
+    100028: joint17
+    100030: joint18
+    100032: joint19
+    100034: joint2
+    100036: joint20
+    100038: joint21
+    100040: joint22
+    100042: joint23
+    100044: joint24
+    100046: joint25
+    100048: joint26
+    100050: joint27
+    100052: joint28
+    100054: joint29
+    100056: joint3
+    100058: joint30
+    100060: joint31
+    100062: joint32
+    100064: joint33
+    100066: joint34
+    100068: joint4
+    100070: joint5
+    100072: joint6
+    100074: joint7
+    100076: joint8
+    100078: joint8 1
+    100080: joint9
+    100082: joint9 1
+    100084: joints01
+    100086: left
+    100088: model01
+    100090: pCube13
+    100092: polySurface25
+    100094: polySurface26
+    100096: polySurface32
+    100098: polySurface33
+    100100: polySurface37
+    100102: polySurface39
+    100104: polySurface40
+    100106: polySurface41
+    100108: polySurface43
+    100110: polySurface44
+    100112: polySurface46
+    100114: polySurface47
+    100116: polySurface48
+    100118: polySurface49
+    100120: polySurface50
+    400000: back
+    400002: //RootNode
+    400004: BullMDL
+    400006: joint1
+    400008: joint10
+    400010: joint10 1
+    400012: joint11
+    400014: joint11 1
+    400016: joint12
+    400018: joint12 1
+    400020: joint13
+    400022: joint14
+    400024: joint15
+    400026: joint16
+    400028: joint17
+    400030: joint18
+    400032: joint19
+    400034: joint2
+    400036: joint20
+    400038: joint21
+    400040: joint22
+    400042: joint23
+    400044: joint24
+    400046: joint25
+    400048: joint26
+    400050: joint27
+    400052: joint28
+    400054: joint29
+    400056: joint3
+    400058: joint30
+    400060: joint31
+    400062: joint32
+    400064: joint33
+    400066: joint34
+    400068: joint4
+    400070: joint5
+    400072: joint6
+    400074: joint7
+    400076: joint8
+    400078: joint8 1
+    400080: joint9
+    400082: joint9 1
+    400084: joints01
+    400086: left
+    400088: model01
+    400090: pCube13
+    400092: polySurface25
+    400094: polySurface26
+    400096: polySurface32
+    400098: polySurface33
+    400100: polySurface37
+    400102: polySurface39
+    400104: polySurface40
+    400106: polySurface41
+    400108: polySurface43
+    400110: polySurface44
+    400112: polySurface46
+    400114: polySurface47
+    400116: polySurface48
+    400118: polySurface49
+    400120: polySurface50
+    2000000: back
+    2000002: left
+    2300000: pCube13
+    2300002: polySurface25
+    2300004: polySurface32
+    2300006: polySurface37
+    2300008: polySurface39
+    2300010: polySurface40
+    2300012: polySurface41
+    2300014: polySurface44
+    3300000: pCube13
+    3300002: polySurface25
+    3300004: polySurface32
+    3300006: polySurface37
+    3300008: polySurface39
+    3300010: polySurface40
+    3300012: polySurface41
+    3300014: polySurface44
+    4300000: polySurface26
+    4300002: polySurface33
+    4300004: polySurface43
+    4300006: polySurface46
+    4300008: polySurface47
+    4300010: polySurface48
+    4300012: polySurface49
+    4300014: polySurface50
+    4300016: polySurface41
+    4300018: polySurface37
+    4300020: polySurface25
+    4300022: polySurface44
+    4300024: polySurface39
+    4300026: polySurface40
+    4300028: pCube13
+    4300030: polySurface32
+    7400000: Run
+    7400002: Shrug
+    9500000: //RootNode
+    13700000: polySurface26
+    13700002: polySurface33
+    13700004: polySurface43
+    13700006: polySurface46
+    13700008: polySurface47
+    13700010: polySurface48
+    13700012: polySurface49
+    13700014: polySurface50
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: aed20d252eedfbb45941a5f863e10c19, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Shrug
+      takeName: Take 001
+      firstFrame: 26
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

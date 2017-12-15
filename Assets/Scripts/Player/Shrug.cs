@@ -39,7 +39,7 @@ namespace Dariyal.Jallikattu
                 if (CrossPlatformInputManager.GetButtonDown("Shrug"))
                 {
                     attackerLatchStrength -= bullShrugStrength;
-                    controller.animator.SetTrigger("Jump");
+                    controller.animator.SetTrigger("Shrug");
                 }
 
                 if (attackerLatchStrength <= 0)
